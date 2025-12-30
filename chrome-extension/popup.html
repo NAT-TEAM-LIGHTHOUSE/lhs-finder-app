@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 400px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .container {
+      background: white;
+      padding: 0;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+    
+    .header h2 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+    }
+    
+    .header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 13px;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .search-box {
+      margin-bottom: 20px;
+    }
+    
+    .search-box input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    
+    .search-box input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    
+    #results {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 15px;
+    }
+    
+    .result-item {
+      background: #f8f9ff;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .result-item:hover {
+      background: #e8e9ff;
+      transform: translateX(5px);
+    }
+    
+    .result-name {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    
+    .result-url {
+      font-size: 11px;
+      color: #667eea;
+      word-break: break-all;
+    }
+    
+    .instructions {
+      background: #f8f9ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .instructions h3 {
+      margin: 0 0 12px 0;
+      color: #667eea;
+      font-size: 14px;
+    }
+    
+    .instructions ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    .instructions strong {
+      color: #667eea;
+      font-weight: 600;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 30px 10px;
+      color: #999;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>🚀 LHS App Finder</h2>
+      <p>Search apps instantly from address bar</p>
+    </div>
+    
+    <div class="content">
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Type to search (e.g., dashboard, otp)..."
+          autocomplete="off"
+        >
+        <div id="results"></div>
+      </div>
+      
+      <div class="instructions">
+        <h3>📖 How to Use</h3>
+        <ol>
+          <li>Click Chrome address bar (or press <strong>Ctrl+L</strong>)</li>
+          <li>Type: <strong>lhs</strong></li>
+          <li>Press: <strong>Tab</strong> key</li>
+          <li>Type your search query</li>
+          <li>Select from suggestions!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
