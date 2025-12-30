@@ -1,5 +1,5 @@
 // ⚙️ CONFIGURATION - CHANGE THIS TO YOUR SERVER IP
-const SERVER_URL = 'https://ai.lighthouseindia.com/lhsfinder';
+const SERVER_URL = 'https://ai.lighthouseindia.com/lhsfinder/';
 
 // Cache for faster responses
 let cache = {};
